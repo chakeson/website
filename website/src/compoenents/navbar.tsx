@@ -51,7 +51,7 @@ function Navbar() {
             </div>
         </div>
         {/*actaul dropdown menu*/}
-        <div style={{height:`${showMobileNav ? ((dropdownRef.current?.clientHeight)?.toString()+"px") :"0px"}`}} className={`${showMobileNav ? "w-full transition-all ease-out duration-500 overflow-hidden md:hidden":"w-full transition-all ease-out duration-500 overflow-hidden md:hidden"}`}>
+        <div style={{height:`${showMobileNav ? ((dropdownRef.current?.clientHeight)?.toString()+"px") :"0px"}`}} className={`w-full transition-all ease-out duration-500 overflow-hidden md:hidden motion-reduce:transition-none`}>
             <ul ref={dropdownRef} className="block font-semibold text-xl text-black px-16 pb-3">
                 <li>
                     <Link to="/" onClick={()=>{setShowMobileNav(false)}}>Download</Link>
